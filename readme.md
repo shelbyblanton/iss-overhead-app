@@ -45,13 +45,6 @@ Within each loop, we first check to see if the location of the International Spa
 
 ```
 def iss_within_range():
-    """
-    Query the International Space Station (ISS) location API to determine if the station is within range
-    of our MY_LAT and MY_LNG global variables.
-    This function returns boolean true if the MY_LAT, MY_LNG are within 5 degrees of the ISS' LAT, LNG;
-    boolean false if the station is not within 5 degrees.
-    :return:
-    """
     iss_response = requests.get(url="http://api.open-notify.org/iss-now.json")
     iss_response.raise_for_status()
     iss_data = iss_response.json()
