@@ -14,12 +14,12 @@ If the ISS within range to be seen by the naked eye and it is dark outside, send
 
 This application is written with Python 3.11.
 
-![The International Space Station Above the Earth](https://github-readme.s3.us-west-1.amazonaws.com/ISSOverheadApp.png)
+![Picture of the ISS Above the Earth](https://github-readme.s3.us-west-1.amazonaws.com/ISSOverheadApp.png)
 
 ### Main Features
-This application tracks the current position of the International Space Station using [Open Notify's Open APIs from Space](http://open-notify.org/) data. 
+This application tracks the current position of the International Space Station using <a href="http://open-notify.org/" target="_blank">Open Notify's Open APIs from Space</a> data. 
 
-In addition, using the [Sunset/Sunrise API](https://sunrise-sunset.org/), the application checks to see if it is currently night time at the user's current location to determine if the ISS can be seen by the naked eye.  
+In addition, using the <a href="https://sunrise-sunset.org/" target="_blank">Sunset/Sunrise API</a>, the application checks to see if it is currently night time at the user's current location to determine if the ISS can be seen by the naked eye.  
 
 ## Usage & Requirements
 
@@ -41,7 +41,7 @@ while True:
         send_email()
 ```
 
-Within each loop, we first check to see if the location of the International Space Station (ISS) is within range of the user's location by making an request API call to [Open Notify's Open APIs from Space](http://open-notify.org/) API:
+Within each loop, we first check to see if the location of the International Space Station (ISS) is within range of the user's location by making an request API call to <a href="http://open-notify.org/" target="_blank">Open Notify's Open APIs from Space</a> API:
 
 ```
 def iss_within_range():
@@ -60,7 +60,7 @@ def iss_within_range():
 
 If the ISS is within 5º of the user's location, the function returns true. If not, it returns false and the loop continues.
 
-If the `iss_within_range()` function returns `true`, the application then checks the current time at the user's location to determine if the sky is dark enough to see the ISS with the naked eye. This is accomplished by calling the [Sunset/Sunrise API](https://sunrise-sunset.org/) and entering the user's LAT and LNG coordinates, and then comparing the user's current time against the scheduled sunset and sunrise times: 
+If the `iss_within_range()` function returns `true`, the application then checks the current time at the user's location to determine if the sky is dark enough to see the ISS with the naked eye. This is accomplished by calling the <a href="https://sunrise-sunset.org/" target="_blank">Sunset/Sunrise API</a> and entering the user's LAT and LNG coordinates, and then comparing the user's current time against the scheduled sunset and sunrise times: 
 
 ```angular2html
 def is_dark():
